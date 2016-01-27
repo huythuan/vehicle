@@ -1,0 +1,5 @@
+.vehicle--left,
+.vehicle--right {
+  width: 50%;
+  float: left;
+}

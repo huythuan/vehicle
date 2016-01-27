@@ -1,0 +1,45 @@
+{#
+/**
+ * @file 
+ * Default theme implementation for the basic structure of a vehicle.
+ * Availabele variables:
+ * - attributes: HTML attributes for the container div.
+ * - name: The name of the vehicle.
+ * - power: The power of the vehicle.
+ * - mile: The current mile of the vehicle.
+ * - run: The condition of running of the vehicle.
+ * - version: The version of the vehicle.
+ * - available: The availibility of the vehicle
+ * @ingroup themeable
+ */
+#}
+<section{{ attributes }}><!-- begin desscription of a vehicle -->
+<h2>{{ name }}</h2>
+{% if power %}
+  <p><strong>Power:</strong>{{ power }}</p>
+{% endif %}
+{% if mile %}
+  <p><strong>Mile:</strong>{{ mile }}</p>
+{% endif %}
+{% if run %}
+  <strong>Run:</strong>
+  <u>
+    {% for item in run %}
+      <li>{{ item }}</li>
+    {% endfor %}
+  </u>
+{% endif %}
+
+{% if version %}
+  <p><strong>Version:</strong>{{ version }}</p>
+{% endif %}
+
+{% if available %}
+  <strong>Available:</strong>
+  <u>
+    {% for item in available %}
+      <li>{{ item }}</li>
+    {% endfor %}
+  </u>
+{% endif %}
+</section>
