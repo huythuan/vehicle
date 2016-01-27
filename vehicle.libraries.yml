@@ -1,0 +1,6 @@
+description:
+  version: VARY
+  css:
+    theme:
+      css/description.css: {}
+      "https://fonts.googleapis.com/css?family=Special+Elite": {type: external}

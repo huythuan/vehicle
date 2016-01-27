@@ -1,0 +1,7 @@
+vehicle.render:
+  path: '/vehicle'
+  defaults:
+    _controller: '\Drupal\vehicle\Controller\VehicleController::render'
+    _title: 'Vehicle'
+  requirements:
+    _permission: 'access content'

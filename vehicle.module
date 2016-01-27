@@ -1,0 +1,34 @@
+<?php
+
+/**
+ * @file 
+ * Vehicle module
+ */
+use Drupal\Component\Utility\Html;
+
+/**
+ * Implements hook_theme().
+ */
+function vehicle_theme() {
+  return [
+      'vehicle' => [
+          'variables' => [
+              'attributes' => [],
+              'name' => '',
+              'power' => '',
+              'mile' => '',
+              'run' => [],
+              'version' => '',
+              'available' => [],
+          ],
+      ],
+  ]; 
+}
+
+/**
+ * Implements hook_theme_suggestions_sandwich().
+ * @param unknown $variable
+ */
+function vehicle_theme_suggestions_vehicle($variable) {
+  return 'vehicle__' . Html::cleanCssIdentifier($variable['name']);
+}

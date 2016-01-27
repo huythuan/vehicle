@@ -1,0 +1,5 @@
+name: Vehicle
+type: module
+description: Vehicle descriptions only.
+package: Development
+core: 8.x
